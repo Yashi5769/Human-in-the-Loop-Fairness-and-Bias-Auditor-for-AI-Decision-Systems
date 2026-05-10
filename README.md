@@ -204,3 +204,43 @@ Shows how predictions and fairness respond dynamically.
 - Matplotlib
 - Seaborn
 
+# Project Structure
+
+```bash
+fairness_auditor_project/
+│
+├── app/
+│   └── dashboard.py
+│
+├── data/
+│   ├── adult/
+│   │   └── adult.data
+│   ├── fairness_log.csv
+│   └── human_feedback.csv
+│
+├── models/
+│   ├── saved_models/
+│   └── model_log.csv
+│
+├── src/
+│   ├── auto_retrain.py
+│   ├── baseline_model.py
+│   ├── bias_drift_detection.py
+│   ├── counterfactual_analysis.py
+│   ├── data_preprocessing.py
+│   ├── explainability.py
+│   ├── fairness_metrics.py
+│   ├── fairness_monitoring.py
+│   ├── group_bias_mitigation.py
+│   ├── human_review.py
+│   ├── model_comparison.py
+│   └── model_versioning.py
+│
+├── requirements.txt
+└── README.md
+Installation
+1. Clone Repository
+git clone https://github.com/yourusername/fairness-auditor.git
+
+cd fairness-auditor
+
