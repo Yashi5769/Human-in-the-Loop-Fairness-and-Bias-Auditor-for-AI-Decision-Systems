@@ -238,9 +238,4 @@ fairness_auditor_project/
 │
 ├── requirements.txt
 └── README.md
-Installation
-1. Clone Repository
-git clone https://github.com/yourusername/fairness-auditor.git
-
-cd fairness-auditor
 
