@@ -239,3 +239,366 @@ fairness_auditor_project/
 ├── requirements.txt
 └── README.md
 
+# Human-in-the-Loop Fairness and Bias Auditor for AI Decision Systems
+
+A comprehensive AI governance dashboard for detecting, monitoring, explaining, and mitigating bias in machine learning systems using fairness-aware techniques, explainable AI, and human oversight.
+
+---
+
+# Installation
+
+## 1. Clone Repository
+
+```bash
+git clone https://github.com/yourusername/fairness-auditor.git
+
+cd fairness-auditor
+```
+
+---
+
+## 2. Create Virtual Environment
+
+### Windows
+
+```bash
+python -m venv venv
+
+venv\Scripts\activate
+```
+
+### Mac/Linux
+
+```bash
+python3 -m venv venv
+
+source venv/bin/activate
+```
+
+---
+
+## 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Required Libraries
+
+```txt
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+shap
+joblib
+```
+
+---
+
+# Running the Dashboard
+
+```bash
+streamlit run app/dashboard.py
+```
+
+The app will open at:
+
+```txt
+http://localhost:8501
+```
+
+---
+
+# Dataset
+
+## Adult Income Dataset
+
+The dataset predicts whether an individual's income exceeds \$50K/year based on demographic attributes.
+
+### Features Include:
+
+- Age
+- Education
+- Occupation
+- Race
+- Gender
+- Hours per week
+- Capital gain/loss
+
+---
+
+# Dashboard Sections
+
+---
+
+## Model Overview
+
+Displays:
+
+- Dataset size
+- Feature count
+- Accuracy
+- Sensitive attribute being monitored
+
+---
+
+## Prediction Distribution
+
+Shows:
+
+- Number of low-income predictions
+- Number of high-income predictions
+
+---
+
+## Fairness Evaluation
+
+Displays:
+
+- Demographic Parity Difference
+- Disparate Impact Ratio
+- Fairness status
+
+---
+
+## Multi-Model Comparison
+
+Compares:
+
+- Logistic Regression
+- Random Forest
+- XGBoost
+
+Across:
+
+- Accuracy
+- Fairness
+- Final weighted score
+
+---
+
+## Continuous Fairness Monitoring
+
+Tracks fairness over time and detects:
+
+- Drift
+- Sudden fairness degradation
+
+---
+
+## Auto-Retrain System
+
+Automatically:
+
+- Retrains unfair models
+- Saves improved versions
+- Rolls back degraded models
+
+---
+
+## Bias Heatmaps
+
+Visual fairness comparison across:
+
+- Gender
+- Race
+- Intersectional groups
+
+---
+
+## Bias Mitigation
+
+Uses:
+
+- Group reweighting
+- Fairness-aware retraining
+
+To reduce discrimination.
+
+---
+
+## SHAP Explainability
+
+Explains:
+
+- Which features influence predictions
+- Why individual predictions happen
+
+---
+
+## Counterfactual Fairness
+
+Tests whether changing only sensitive attributes changes predictions unfairly.
+
+---
+
+## Human Review
+
+Allows:
+
+- Manual correction
+- Human feedback logging
+- AI oversight
+
+---
+
+## What-if Simulator
+
+Interactive testing tool for:
+
+- Scenario analysis
+- Fairness stress testing
+- Feature impact exploration
+
+---
+
+# Fairness Metrics Explained
+
+## Demographic Parity Difference
+
+Measures:
+
+> Difference in positive prediction rates between groups.
+
+Ideal value:
+
+```txt
+0
+```
+
+---
+
+## Disparate Impact Ratio
+
+Measures:
+
+> Ratio of favorable outcomes between groups.
+
+Ideal value:
+
+```txt
+1
+```
+
+---
+
+# Explainability
+
+The project uses **SHAP (SHapley Additive exPlanations)** for:
+
+- Global interpretability
+- Local interpretability
+- Feature attribution
+
+---
+
+# Bias Mitigation Strategy
+
+## Group Reweighting
+
+The system:
+
+1. Detects the worst affected demographic group
+2. Assigns higher training weights
+3. Retrains the model
+4. Re-evaluates fairness
+
+---
+
+# Human-in-the-Loop Concept
+
+Instead of fully autonomous AI:
+
+- Humans remain involved
+- Decisions can be reviewed
+- Bias can be corrected manually
+
+This improves:
+
+- Accountability
+- Trust
+- Ethical AI deployment
+
+---
+
+# Future Improvements
+
+Possible future enhancements:
+
+- Real-time deployment monitoring
+- Advanced fairness metrics
+- LLM-powered explanations
+- Federated fairness auditing
+- API integration
+- Role-based authentication
+- PDF fairness reports
+- Cloud deployment
+
+---
+
+# Use Cases
+
+This system can be applied in:
+
+- Hiring systems
+- Loan approval systems
+- Healthcare AI
+- Insurance AI
+- University admissions
+- Criminal justice systems
+
+---
+
+# Learning Outcomes
+
+This project demonstrates:
+
+- Machine Learning Engineering
+- Responsible AI
+- AI Fairness
+- Explainable AI (XAI)
+- Human-in-the-Loop Systems
+- AI Governance
+- Ethical AI Deployment
+- MLOps Concepts
+
+---
+
+Example:
+
+```markdown
+![Dashboard](images/dashboard.png)
+```
+
+---
+
+# Author
+
+## Yashi
+
+B.Tech CSE (AI/ML Specialization)
+
+Focused on:
+
+- Responsible AI
+- Fairness in Machine Learning
+- Explainable AI
+- Human-Centered AI Systems
+
+---
+
+# License
+
+This project is licensed under the MIT License.
+
+---
+
+# Final Summary
+
+> This project transforms a traditional machine learning pipeline into a fully monitored, explainable, fairness-aware, and human-supervised AI governance system capable of detecting, mitigating, and continuously monitoring bias in real-world AI decision systems.
