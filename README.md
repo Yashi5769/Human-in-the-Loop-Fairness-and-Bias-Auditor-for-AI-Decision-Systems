@@ -239,12 +239,6 @@ fairness_auditor_project/
 ├── requirements.txt
 └── README.md
 ```
-# Human-in-the-Loop Fairness and Bias Auditor for AI Decision Systems
-
-A comprehensive AI governance dashboard for detecting, monitoring, explaining, and mitigating bias in machine learning systems using fairness-aware techniques, explainable AI, and human oversight.
-
----
-
 # Installation
 
 ## 1. Clone Repository
