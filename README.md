@@ -564,14 +564,6 @@ This project demonstrates:
 
 ---
 
-Example:
-
-```markdown
-![Dashboard](images/dashboard.png)
-```
-
----
-
 # Author
 
 ## Yashi
