@@ -36,13 +36,32 @@ def identify_worst_group(df, sensitive_cols):
 
 def apply_reweighting(df, worst_group, sensitive_cols):
 
+    import numpy as np
+
     df = df.copy()
 
-    # recreate group column
-    df["group"] = df[sensitive_cols].astype(str).agg(" | ".join, axis=1)
+    # convert tuple -> matching string
+    if isinstance(worst_group, tuple):
+        worst_group = " | ".join(
+            map(str, worst_group)
+        )
 
-    # assign higher weight to worst group
-    df["weights"] = np.where(df["group"] == worst_group, 4.0, 1.0)
+    # ensure all sensitive columns are strings
+    for col in sensitive_cols:
+        df[col] = df[col].astype(str)
+
+    # create combined group column
+    df["group"] = (
+        df[sensitive_cols]
+        .agg(" | ".join, axis=1)
+    )
+
+    # assign weights
+    df["weights"] = np.where(
+        df["group"] == worst_group,
+        4.0,
+        1.0
+    )
 
     return df
 
