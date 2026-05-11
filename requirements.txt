@@ -6,3 +6,4 @@ seaborn==0.12.2
 shap==0.42.1
 streamlit==1.30.0
 xgboost
+watchdog
